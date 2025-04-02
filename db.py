@@ -192,7 +192,7 @@ def guardar_seguimiento_guia(id_salida, n_guia, direccion, contacto, cliente, te
             # Crear directorio en FTP para esta guía
             try:
                 import os
-                from ftp_utils import get_ftp_connection, ensure_directory_exists
+                from .ftp_utils import get_ftp_connection, ensure_directory_exists
                 
                 FTP_BASE_PATH = '/public_html/python/grupokssd/rastreo'
                 ftp = get_ftp_connection()
