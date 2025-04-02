@@ -3,7 +3,7 @@ from flask_login import LoginManager, UserMixin, login_user, login_required, log
 import urllib.parse
 import json
 from datetime import datetime
-import db  # Importamos el módulo db que acabamos de crear
+from . import db
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'tu_clave_secreta_aqui'  # Cambiar en producción
