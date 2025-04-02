@@ -176,7 +176,7 @@ def confirmar_entrega(id_guia):
                 
             # Guardar la firma en el servidor FTP
             firma_url = None
-            from .ftp_utils import upload_base64_image
+            from ftp_utils import upload_base64_image
             
             if form_data['firma']:
                 # Generar nombre del archivo incluyendo nombre y número de guía
@@ -289,7 +289,7 @@ def rechazar_entrega(id_guia):
             # Fotos tomadas directamente
             if 'fotos' in request.files:
                 fotos = request.files.getlist('fotos')
-                from .ftp_utils import upload_file
+                from ftp_utils import upload_file
                 
                 for i, foto in enumerate(fotos):
                     if foto and foto.filename:
