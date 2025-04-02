@@ -538,4 +538,8 @@ def actualizar_entrega(id_guia):
         return jsonify({'error': f'Error interno del servidor: {str(e)}'}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # Para desarrollo
+    # app.run(debug=True)
+    
+    # Para producción
+    app.run(host='0.0.0.0', port=5000, debug=False)
